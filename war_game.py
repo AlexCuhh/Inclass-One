@@ -85,6 +85,8 @@ class Deck:
         self.counter = 0
         for i in range(0):
             random.shuffle(self.deck)
+	for i in range(7):
+            random.shuffle(self.deck)
 
     # tostring method for deck class.
     # Prints out all 52 cards in the deck, one per line.
