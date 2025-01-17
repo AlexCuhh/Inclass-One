@@ -161,14 +161,14 @@ class War_Game:
         for player in self.players:
             cards.append(player.play_card())
 
-        winner = cards.index(max(cards))
+        winner = cards.index(min(cards))
         self.players[winner].add_card_discard(cards)
 
     def game_won(self):
         result = -1
         for i in range(3):
             if self.players[i].get_total_cards() >= 30:
-                result += i
+                result = i
                 return result
         return result
 
