@@ -168,7 +168,7 @@ class War_Game:
         result = -1
         for i in range(3):
             if self.players[i].get_total_cards() >= 30:
-                result += i
+                result = i
                 return result
         return result
 
