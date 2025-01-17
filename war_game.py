@@ -164,9 +164,9 @@ class War_Game:
 
     def game_won(self):
         result = -1
-        for i in range(len(self.players)):
+        for i in range(3):
             if self.players[i].get_total_cards() >= 30:
-                result = i
+                result += i
                 return result
         return result
 
