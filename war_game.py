@@ -160,9 +160,9 @@ class War_Game:
         cards = []
         for player in self.players:
             cards.append(player.play_card())
-
-        winner = cards.index(min(cards))
-        self.players[winner].add_card_discard(cards)
+        
+        winner = cards.index(max(cards)) - 1
+        self.players[winner].add_card_discard(cards)       
 
     def game_won(self):
         result = -1
